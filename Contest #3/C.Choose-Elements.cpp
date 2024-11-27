@@ -1,12 +1,10 @@
 #include <iostream>
 #include <algorithm>
-
 using namespace std;
-
 int main()
 {
-    int size, maxSum;
-    cin >> size >> maxSum;
+    int size, k;
+    cin >> size >> k;
 
     long long *arr = new long long[size];
     for (int i = 0; i < size; i++)
@@ -17,7 +15,7 @@ int main()
     reverse(arr, arr + size);
 
     long long sum = 0;
-    for (int i = 0; i < maxSum; i++)
+    for (int i = 0; i < k; i++)
     {
         if (arr[i] < 0)
             break;
