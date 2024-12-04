@@ -16,17 +16,8 @@ int main()
     {
         string str1;
         cin >> str1;
-        if (str1 == "substr")
-        {
-            int l, r;
-            cin >> l >> r;
-            if (l > r)
-                swap(l, r);
-            string s1;
-            s1 = str.substr(l - 1, r - l + 1);
-            cout << s1 << endl;
-        }
-        else if (str1 == "pop_back")
+
+        if (str1 == "pop_back")
             str.pop_back();
         else if (str1 == "front")
             cout << str[0] << endl;
@@ -53,6 +44,16 @@ int main()
             int pos;
             cin >> pos;
             cout << str[pos - 1] << endl;
+        }
+        else if (str1 == "substr")
+        {
+            int l, r;
+            cin >> l >> r;
+            if (l > r)
+                swap(l, r);
+            string s1;
+            s1 = str.substr(l - 1, r - l + 1);
+            cout << s1 << endl;
         }
         else if (str1 == "push_back")
         {
