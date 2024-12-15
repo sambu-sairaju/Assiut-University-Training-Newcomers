@@ -2,15 +2,19 @@
 using namespace std;
 void is_prime(int n)
 {
-    int cnt = 0;
     if (n <= 1)
         cout << "NO" << endl;
     else
     {
-        for (int i = 2; i * i <= n; i++)
+        int cnt = 0;
+        int f = sqrt(n);
+        for (int i = 2; i <= f; i++)
         {
             if (n % i == 0)
+            {
                 cnt++;
+                break;
+            }
         }
         if (cnt > 0)
             cout << "NO" << endl;
