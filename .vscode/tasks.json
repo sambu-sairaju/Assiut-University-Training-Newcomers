@@ -15,7 +15,7 @@
             "problemMatcher": [
                 "$gcc"
             ],
-"detail": "Generated task by GitHub Copilot",
+            "detail": "Generated task by GitHub Copilot",
             "presentation": {
                 "reveal": "never"
             }
@@ -23,7 +23,7 @@
         {
             "label": "run",
             "type": "shell",
-            "command": "${fileDirname}/${fileBasenameNoExtension}",
+            "command": "chmod +x ${fileDirname}/${fileBasenameNoExtension} && ${fileDirname}/${fileBasenameNoExtension}",
             "args": [
                 "<",
                 "input.txt",

@@ -16,7 +16,7 @@
             "cwd": "${fileDirname}",
             "environment": [],
             "externalConsole": false,
-            "MIMode": "lldb", // for Mac
+            "MIMode": "lldb",
             "miDebuggerPath": "/usr/bin/lldb-mi"
         }
     ]
