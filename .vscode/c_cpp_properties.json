@@ -1,0 +1,21 @@
+{
+    "configurations": [
+        {
+            "name": "Mac",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1",
+                "/Library/Developer/CommandLineTools/usr/lib/clang/16/include",
+                "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include",
+                "/Library/Developer/CommandLineTools/usr/include",
+                "/opt/homebrew/include"
+            ],
+            "defines": [],
+            "compilerPath": "/opt/homebrew/bin/g++-14", // Replace with your g++ path
+            "cStandard": "c17",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "macos-gcc-arm64"
+        }
+    ],
+    "version": 4
+}

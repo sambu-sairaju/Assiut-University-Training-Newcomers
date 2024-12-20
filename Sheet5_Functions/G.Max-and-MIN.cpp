@@ -20,11 +20,10 @@ int main()
     freopen("input.txt", "r", stdin);
     freopen("output.txt", "w", stdout);
 #endif
-    int n, a[1000], s[2];
+    int n, a[1000];
     cin >> n;
     for (int i = 0; i < n; i++)
         cin >> a[i];
-
     pair<int, int> result = solve(a, n);
     cout << result.first << " " << result.second << endl;
     return 0;
