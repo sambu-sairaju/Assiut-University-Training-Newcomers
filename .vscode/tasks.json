@@ -36,7 +36,7 @@
             },
             "presentation": {
                 "echo": true,
-                "reveal": "always",
+                "reveal": "never",
                 "focus": false,
                 "panel": "shared"
             },
