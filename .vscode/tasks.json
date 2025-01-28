@@ -21,12 +21,15 @@
                 "panel": "shared",
                 "showReuseMessage": false,
                 "clear": true
+            },
+            "options": {
+                "cwd": "${fileDirname}"
             }
         },
         {
             "label": "run",
             "type": "shell",
-            "command": "chmod +x ${fileDirname}/${fileBasenameNoExtension} && ${fileDirname}/${fileBasenameNoExtension}",
+            "command": "${fileDirname}/${fileBasenameNoExtension}",
             "args": [
                 "<",
                 "input.txt",
