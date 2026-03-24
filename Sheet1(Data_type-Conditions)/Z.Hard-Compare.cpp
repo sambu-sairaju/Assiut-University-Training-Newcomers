@@ -1,5 +1,6 @@
-#include <iostream>
-#include <cmath> // for log function
+//https://codeforces.com/group/MWSDmqGsZm/contest/219158/problem/Z
+
+#include <bits/stdc++.h>
 using namespace std;
 
 int main()
