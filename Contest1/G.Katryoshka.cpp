@@ -1,95 +1,25 @@
+//https://codeforces.com/group/MWSDmqGsZm/contest/326175/problem/G
+
 #include <bits/stdc++.h>
 using namespace std;
-
-void solution1()
-{
-    long long eye, mouth, body, num;
-    cin >> eye >> mouth >> body;
-    num = 0;
-
-    if (eye != 0 && body != 0)
-    {
-        if (mouth >= eye && mouth >= body && eye != 0 && body != 0)
-        {
-            if (eye >= body)
-            {
-                num = body;
-            }
-            else if (body >= eye)
-            {
-                num = eye;
-            }
-        }
-        else if (eye <= mouth && eye <= body)
-        {
-            num = eye;
-        }
-        else if (body <= mouth && body <= eye)
-        {
-            num = body;
-        }
-        else if (mouth <= body && mouth <= eye)
-        {
-            num += mouth;
-            eye -= mouth;
-            body -= mouth;
-
-            if (eye / 2 <= body)
-            {
-                if (eye % 2 == 0)
-                {
-                    eye = eye / 2;
-                    num += eye;
-                }
-                else
-                {
-                    eye -= 1;
-                    eye = eye / 2;
-                    num += eye;
-                }
-            }
-            else
-            {
-                num += body;
-            }
-        }
-    }
-    cout << num;
-}
-
-void solution2()
-{
-    long long eyes, mouth, body;
-    cin >> eyes >> mouth >> body;
-    long long counter = 0;
-    if (eyes == 0 || body == 0)
-    {
-        cout << 0;
-        return;
-    }
-
-    // 24 90 80
-
-    if (mouth > 0)
-    {
-        long long min_ = min(eyes, min(body, mouth));
-
-        counter += min_;
-        eyes -= min_;
-        mouth -= min_;
-        body -= min_;
-    }
-
-    if (eyes > 0 && body > 0)
-    {
-        eyes /= 2;
-        long long min_ = min(eyes, body);
-        counter += min_;
-    }
-
-    cout << counter;
-}
 int main()
 {
-    solution2();
+    long long eyes, mouths, bodies;
+    cin >> eyes >> mouths >> bodies;
+    // STEP 1: Maximize Combination #3 (1 Eye, 1 Mouth, 1 Body)
+    // The maximum we can build is limited by the smallest pile of parts.
+    long long step1_toys = min({eyes, mouths, bodies});
+    
+    // Deduct the parts we just used from our inventory
+    eyes -= step1_toys;
+    mouths -= step1_toys;
+    bodies -= step1_toys;
+    
+    // STEP 2: Use leftovers on Combination #1 (2 Eyes, 0 Mouths, 1 Body)
+    // We only care about remaining eyes / 2 and remaining bodies.
+    long long step2_toys = min(eyes / 2, bodies);
+    // TOTAL: Add toys from Step 1 and Step 2
+    long long total_katryoshkas = step1_toys + step2_toys;
+    cout << total_katryoshkas << endl;
+    return 0;
 }

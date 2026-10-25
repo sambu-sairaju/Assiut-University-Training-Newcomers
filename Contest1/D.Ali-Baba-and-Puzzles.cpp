@@ -1,3 +1,5 @@
+//https://codeforces.com/group/MWSDmqGsZm/contest/326175/problem/D
+
 #include <bits/stdc++.h>
 using namespace std;
 int main()
@@ -6,36 +8,19 @@ int main()
     cin >> a >> b >> c >> d;
 
     if (a + b * c == d)
-    {
         cout << "YES" << endl;
-        return 0;
-    }
     else if (a + b - c == d)
-    {
         cout << "YES" << endl;
-        return 0;
-    }
     else if (a - b * c == d)
-    {
         cout << "YES" << endl;
-        return 0;
-    }
     else if (a - b + c == d)
-    {
         cout << "YES" << endl;
-        return 0;
-    }
     else if (a * b + c == d)
-    {
         cout << "YES" << endl;
-        return 0;
-    }
     else if (a * b - c == d)
-    {
         cout << "YES" << endl;
-        return 0;
-    }
     else
-        cout << "NO" << endl;
+      cout << "NO" << endl;
+    
     return 0;
 }
